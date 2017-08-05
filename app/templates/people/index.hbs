@@ -17,7 +17,9 @@
       <td>{{person.personScore}}</td>
       <td>
       {{#link-to 'people.edit' person.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
-      <button class="btn btn-danger btn-xs" {{action 'deletePersom' person}}>Delete</button></td>
+      <button class="btn btn-danger btn-xs" {{action 'deletePerson' person}}>Delete</button>
+      {{#link-to 'people.goals' person.id class='btn btn-primary btn-xs'}}Show Goal(s){{/link-to}}
+      </td>
     </tr>
   {{/each}}
   </tbody>
