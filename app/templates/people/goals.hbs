@@ -1,0 +1,17 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Score</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |goal|}}
+    <tr>
+      <th>{{goal.title}}</th>
+      <td>{{goal.score}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

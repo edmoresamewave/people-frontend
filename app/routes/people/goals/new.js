@@ -21,9 +21,5 @@ export default Ember.Route.extend({
       // if the model 'isNew'
       this.controller.get('model').rollbackAttributes();
     }
-  },
-
-  people: function(){
-    return this.store.find('person');
-  }.property()
+  }
 });
