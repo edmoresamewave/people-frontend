@@ -3,5 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
-  personScore: DS.attr('number')
+  personScore: DS.attr('number'),
+
+  goals: DS.hasMany('goal')
 });

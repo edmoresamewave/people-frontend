@@ -1,0 +1,26 @@
+<h2>Add Goal</h2>
+
+<div class="form-horizontal">
+  <div class="form-group">
+      <label class="col-sm-2 control-label">Person</label>
+      <div class="col-sm-10">
+      </div>
+    </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+      {{input type="text" value=model.title class="form-control" placeholder="The title of the goal"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Score</label>
+    <div class="col-xs-1">
+      {{input type="text" value=model.score class="form-control" placeholder="Score"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" {{action 'saveGoal' model}}>Add Goal</button>
+    </div>
+  </div>
+</div>
