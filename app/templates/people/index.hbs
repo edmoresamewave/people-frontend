@@ -18,6 +18,7 @@
       <td>
       {{#link-to 'people.edit' person.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
       <button class="btn btn-danger btn-xs" {{action 'deletePerson' person}}>Delete</button>
+      {{#link-to 'people.goals.new' person.id class='btn btn-primary btn-xs'}}Add Goal{{/link-to}}
       {{#link-to 'people.goals' person.id class='btn btn-primary btn-xs'}}Show Goal(s){{/link-to}}
       </td>
     </tr>

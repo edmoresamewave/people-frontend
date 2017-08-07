@@ -3,11 +3,9 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model(params) {
-    var individual;
-    this.store.findRecord('person', params.person_id).then(function(person) {
-      individual = person;
-    });
-    return this.store.createRecord('goal', {title: params.title, score: params.score, person: individual});
+    return this.store.createRecord('goal',
+      {title: params.title, score: params.score, person_id: params.person_id}
+    );
   },
 
   actions: {

@@ -12,5 +12,5 @@ export default DS.JSONAPISerializer.extend({
     delete json.data.attributes['person-score'];
 
     return json;
-  },
+  }
 });
