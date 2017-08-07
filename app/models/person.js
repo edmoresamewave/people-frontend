@@ -9,5 +9,10 @@ export default DS.Model.extend({
   goals: DS.hasMany('goal'),
 
   isValid: Ember.computed.notEmpty('firstName'),
-  isValid: Ember.computed.notEmpty('lastName')
+  isValid: Ember.computed.notEmpty('lastName'),
+
+  averageScore: Ember.computed('personScore', function() {
+    var formatted = this.get('personScore');
+    return parseFloat(formatted).toFixed(2);
+  }),
 });
